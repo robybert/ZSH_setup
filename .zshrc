@@ -12,11 +12,14 @@
 #     alias-finder
 #     battery
 #     )
+
 source ~/.zsh/z.plugin.zsh
 source ~/.zsh/ZSH_setup/oh-my-zsh.sh
 source ~/.zsh/ZSH_setup/agnoster.zsh-theme
 source ~/.zsh/background/background.plugin.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+neofetch
+
 
 #Aliases
 alias myip="echo IPv4:; curl http://ipecho.net/plain; echo; echo IPv6:; curl https://icanhazip.com;"
@@ -44,4 +47,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # xmodmap ~/.Xmodmap
-export PATH="$PATH:/opt/mssql-tools/bin"
+
+mkcd() {
+    mkdir "$1"
+    cd "$1"
+}
