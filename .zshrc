@@ -1,21 +1,22 @@
-export ZSH="/home/robbert/.oh-my-zsh"
+# export ZSH="/home/robbert/.oh-my-zsh"
 
-ZSH_THEME="agnoster"
-
-
+# ZSH_THEME="agnoster"
 
 
-plugins=(
-    extract 
-    z 
-    vscode
-    web-search
-    alias-finder
-    battery
-    )
 
-source $ZSH/oh-my-zsh.sh
-source /home/robbert/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# plugins=(
+#     extract 
+#     z 
+#     vscode
+#     web-search
+#     alias-finder
+#     battery
+#     )
+source ~/.zsh/ZSH\ setup/z/z.plugin.zsh
+source ~/.zsh/ZSH\ setup/oh-my-zsh.sh
+source ~/.zsh/ZSH\ setup/agnoster.zsh-theme
+
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Aliases
 alias myip="echo IPv4:; curl http://ipecho.net/plain; echo; echo IPv6:; curl https://icanhazip.com;"
