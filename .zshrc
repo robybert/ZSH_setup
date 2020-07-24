@@ -1,4 +1,5 @@
-# export ZSH="/home/robbert/.oh-my-zsh"
+export ZSH="/home/robbert/.oh-my-zsh"
+
 
 # ZSH_THEME="agnoster"
 
@@ -15,6 +16,7 @@
 source ~/.zsh/ZSH\ setup/z/z.plugin.zsh
 source ~/.zsh/ZSH\ setup/oh-my-zsh.sh
 source ~/.zsh/ZSH\ setup/agnoster.zsh-theme
+neofetch
 
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -43,5 +45,9 @@ alias gitbr="git branch"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-xmodmap ~/.Xmodmap
-export PATH="$PATH:/opt/mssql-tools/bin"
+# xmodmap ~/.Xmodmap
+
+mkcd() {
+    mkdir "$1"
+    cd "$1"
+}

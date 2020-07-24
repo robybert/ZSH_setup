@@ -91,7 +91,7 @@ prompt_segment_rev() {
   [[ -n $2 ]] && fg="%F{$2}" || fg="%f"
   
   if [[ $CURRENT_BG != 'NONE' && $1 != $CURRENT_BG ]]; then
-    echo -n " %{$fg%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR%{$fg%} "
+    echo -n " %{$fgsym%}$SEGMENT_SEPARATOR_REV%{%{$bg%} %{$fg%}%} "
   else
     echo -n " %{$fgsym%}$SEGMENT_SEPARATOR_REV%{%{$bg%} %{$fg%}%}"
   fi
@@ -312,10 +312,12 @@ build_cmd() {
 }
 
 build_rprompt() {
+  prompt_time
   prompt_git
   prompt_rev_end
 }
+clear
 
-RPROMPT='$(build_rprompt)'
-PROMPT='%{%f%b%k%}$(build_prompt)${NEWLINE}$(build_cmd)'
+RPS1='$(prompt_git) $EPS1'
+PROMPT='$(build_prompt)${NEWLINE}$(build_cmd) '
 
