@@ -1,4 +1,4 @@
-# export ZSH="/home/robbert/.oh-my-zsh"
+ export ZSH="/home/pi/.oh-my-zsh"
 
 # ZSH_THEME="agnoster"
 
@@ -12,11 +12,11 @@
 #     alias-finder
 #     battery
 #     )
-source ~/.zsh/ZSH\ setup/z/z.plugin.zsh
-source ~/.zsh/ZSH\ setup/oh-my-zsh.sh
-source ~/.zsh/ZSH\ setup/agnoster.zsh-theme
-
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/z.plugin.zsh
+source ~/.zsh/ZSH_setup/oh-my-zsh.sh
+source ~/.zsh/ZSH_setup/agnoster.zsh-theme
+source ~/.zsh/background/background.plugin.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #Aliases
 alias myip="echo IPv4:; curl http://ipecho.net/plain; echo; echo IPv6:; curl https://icanhazip.com;"
@@ -43,5 +43,5 @@ alias gitbr="git branch"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 export PATH="$PATH:/opt/mssql-tools/bin"
